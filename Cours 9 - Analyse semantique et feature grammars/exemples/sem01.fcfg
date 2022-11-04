@@ -1,0 +1,8 @@
+%start S
+S[SEM = <app(?vp,?suj)>] -> NP[SEM=?suj] VP[SEM=?vp]
+VP[SEM=?v] -> V[SEM=?v, subcat=0]
+VP[SEM=<app(?v,?np)>] -> V[SEM=?v,subcat=1] NP[SEM=?np]
+NP[SEM=<jean>] -> 'Jean'
+NP[SEM=<marie>] -> 'Marie'
+V[SEM=<\x.marche(x)>, subcat=0] -> 'marche'
+V[SEM=<\y.\x.aime(x,y)>, subcat=1] -> 'aime'
